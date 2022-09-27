@@ -1,0 +1,37 @@
+<mvc:View controllerName="com.birla.fiBirlaTaxReportApplication.controller.Details" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout" xmlns:f="sap.f"
+	xmlns:uxap="sap.uxap" xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<App>
+		<pages>
+			<Page title="Details">
+				<content>
+					<uxap:ObjectPageHeaderContent>
+						<uxap:content>
+							<layout:VerticalLayout>
+								<!--<f:Avatar displaySize="XL"/>-->
+								<Text text="{employeeData>/0/name}" class="sapUiSmallMarginTop"/>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<ObjectStatus title="Employee ID" text="{employeeData>/0/personnelNo}"/>
+								<ObjectStatus title="Designation" text="{employeeData>/0/designation}"/>
+								<ObjectStatus title="Employee Group" text="{employeeData>/0/employeeGroup}"/>
+								<ObjectStatus title="Date of Joining" text="{employeeData>/0/dateOfJoin}"/>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<ObjectStatus title="Cost Center" text="{employeeData>/0/cost_center}"/>
+								<ObjectStatus title="Email Id" text="{employeeData>/0/email}"/>
+								<ObjectAttribute title="{i18n>formPhoneHome}" text="{employeeData>/0/phone}"/>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<ObjectAttribute title="{i18n>formAddress}" text="{employeeData>/0/address}"/>
+								<ObjectAttribute title="{i18n>formCity}" text="{employeeData>/0/city}"/>
+								<ObjectAttribute title="Gender" text="{employeeData>/0/genderText}"/>
+								<ObjectAttribute title="{i18n>formCountry}" text="{employeeData>/0/country}"/>
+								<ObjectAttribute title="{i18n>formPostalCode}" text="{employeeData>/0/postal}"/>
+							</layout:VerticalLayout>
+						</uxap:content>
+					</uxap:ObjectPageHeaderContent>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
